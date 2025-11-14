@@ -1,8 +1,8 @@
 public abstract class ProductComponent {
     protected String name;
-    protected int price;
+    protected double price;
 
-    public ProductComponent(String name, int price){
+    public ProductComponent(String name, double price){
         this.name=name;
         this.price=price;
     }
@@ -10,7 +10,7 @@ public abstract class ProductComponent {
     public String getName(){
         return name;
     }
-    public abstract int getPrice();
+    public abstract double getPrice();
     public abstract void display();
 
 }
