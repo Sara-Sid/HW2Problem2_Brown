@@ -7,15 +7,14 @@ public class BlackFridayDeal {
     // Adding a customer to receive notifications
     public void addCustomer(Customer customer){
         this.customer.add(customer);
-        System.out.print(customer.getName() + " is now subscribed to Black Friday Deals");
+        System.out.println(customer.getName() + " is now subscribed to Black Friday Deals");
     }
 
     /* Sending notifications to every customer in the list who is subscribed */
     public void notifyCustomers(String deal){
-        System.out.println("Did someone say NEW DEAL!!" );
-        System.out.println("Announcing HEW BLACK FRIDAY DEALS");
-        for (Customer customer : customer){
+        for (Customer customer : this.customer){
             customer.receiveNotifications(deal);
+            System.out.println("------GET IT WHILE IT LASTSSSS-----\n");
         }
     }
 

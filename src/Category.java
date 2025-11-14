@@ -12,7 +12,7 @@ public class Category extends ProductComponent{
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return 0;
     }
     public void display() {

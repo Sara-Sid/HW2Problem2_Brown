@@ -1,8 +1,8 @@
 public class Product extends ProductComponent{
-    public Product(String name, int price) {
+    public Product(String name, double price) {
         super(name, price);
     }
-    public int getPrice(){
+    public double getPrice(){
         return this.price;
     }
 
