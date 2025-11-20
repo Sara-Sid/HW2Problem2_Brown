@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BlackFridayDeal {
-    private List<Customer> customers = new ArrayList<>();
+    protected List<Customer> customers = new ArrayList<>();
 
     public void addCustomer(Customer customer) {
         customers.add(customer);
@@ -12,13 +12,14 @@ public class BlackFridayDeal {
         customers.remove(customer);
     }
 
-    public void notifyCustomers(String deal, Customer... testList) {
+    public void notifyCustomers(String deal, List<Customer> allCustomers) {
+        for (Customer c : allCustomers) {
 
-        for (Customer c: testList) {
             if (customers.contains(c)) {
-                c.receiveNotifications(deal);
-            } else {
-                System.out.println("Customer " + c.getName() + " is not subscribed to deal notifications.");
+                c.receiveNotification(deal);
+            } 
+            else {
+                System.out.println("Customer " + c.getName() + " is not subscribed to deal notifications.\n");
             }
         }
     }
